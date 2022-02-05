@@ -1,0 +1,9 @@
+SELECT
+	pp.id AS "ID",
+	p1.name AS "NAME PRODUCT 1",
+    	p2.name AS "NAME PRODUCT 2",
+	harga_promo.price "PROMO PRICE"
+FROM promo as pp 
+JOIN product as p1 ON p1.id = pp.product1_id
+JOIN product as p2 ON p2.id = pp.product2_id
+JOIN harga_promo ON harga_promo.promo_id = pp.id
